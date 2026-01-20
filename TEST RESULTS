@@ -1,1 +1,28 @@
+# TEST-RESULTS
+
+## Black-box / Acceptance Testing
+
+1. 4+5 => 9.0 [OK]
+2. 10-3 => 7.0 [OK]
+3. 2*3 => 6.0 [OK]
+4. 8/2 => 4.0 [OK]
+5. 10+5*2 => 20.0 [OK]
+6. 10/2+3 => 8.0 [OK]
+7. +5+3 => 8.0 [OK]
+8. -5+3 => -2.0 [OK]
+9. 10/0 => Infinity [Warning: no proper zero-division handling]
+10. abcd => ERROR [OK]
+11. 5+ => ERROR [OK]
+12. 5++3 => ERROR [OK]
+
+### Zapažanja:
+- Deljenje nulom nije pravilno obrađeno
+- Nevalidni izrazi vraćaju string "ERROR", nije tip-sigurno
+- Prioritet operacija funkcioniše ispravno
+- Početni znak + ili - je podržan
+
+## Unit Test
+
+Tested method: Calculator.Run("10+5*2") → result = "20.0"
+- Jedinični test uspešno prolazi, prioritet operacija je ispravno implementiran
 
